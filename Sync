@@ -1,0 +1,9 @@
+aws s3 sync 'D:\Civil' s3://srienergy/Civil/Civil/ 
+
+aws s3 sync 'D:\Civil' s3://srienergy/Civil/Civil/ --exact-timestamps --only-show-errors
+
+aws s3 ls s3://srienergy/Civil/Civil/ --recursive | measure-object
+
+aws s3 sync 'D:\Civil' s3://srienergy/Civil/Civil/ --exact-timestamps --only-show-errors >> C:\logs\nas_s3.log 2>&1
+
+aws s3 sync s3://srienergy/Civil/Civil/  D:\Civil\ --exact-timestamps - Restore 
